@@ -1,4 +1,10 @@
+## 🚀 Mejoras implementadas sobre el código base (Extra)
 
+Además de cumplir con los requisitos obligatorios de la práctica (Puntuación, Vidas y Jefe Final), he refactorizado el motor del juego para conseguir una experiencia mucho más fluida y profesional:
+
+* **Upgrade a 60 FPS:** El bucle de renderizado original (`setInterval`) corría a 50ms (20 FPS), provocando un movimiento a tirones. Se ha optimizado a 16ms para alcanzar los 60 fotogramas por segundo, reajustando las velocidades de las entidades para mantener el equilibrio del juego.
+* **Físicas de impacto reales:** En el código original, las balas atravesaban a los enemigos generando fallos visuales y problemas de puntuación. Se ha reescrito la lógica de colisión para que los proyectiles (tanto aliados como enemigos) se destruyan y desaparezcan del DOM al impactar.
+* **Controles simultáneos (Multitouch/Teclado):** Se ha modificado el *Event Handler* para almacenar un objeto con el estado de las teclas en lugar de una única variable. Esto permite al jugador moverse y disparar al mismo tiempo sin que la nave se quede bloqueada.
 ## Practice with Classes, Booleans, Strings, and Event Handling
 
 
